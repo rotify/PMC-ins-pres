@@ -1,0 +1,48 @@
+═══════════════════════════════════════════════════════════════
+  INSIGHTS & EVENTS — HOW TO ADD POSTS (no code skills needed)
+═══════════════════════════════════════════════════════════════
+
+This section is what brings people BACK to the site and helps
+Google find it. The more regularly you post, the more it works.
+
+------------------------------------------------------------
+TO ADD A NEW POST
+------------------------------------------------------------
+1. Open:  src/data/siteData.js
+2. Find:  export const POSTS = [
+3. Copy one existing { ... } block and paste it at the TOP of the
+   list (newest first). Change the fields:
+
+   {
+     type: 'article',          // 'article' = tip/insight, 'event' = an event
+     slug: 'a-short-unique-id',// lowercase-with-dashes, must be unique
+     title: 'Your Post Title',
+     date: '2026-10-11',       // YYYY-MM-DD (controls the order shown)
+     author: 'Tricia Chris-Omon',
+     tags: ['Parenting', 'Focus'],
+     image: '',                // optional: a photo in /public, e.g. '/tip1.jpg'
+     excerpt: 'One or two sentence teaser shown on the card.',
+     body:
+       'First paragraph.\n\n' +
+       'Second paragraph. Use \\n\\n between paragraphs.',
+   },
+
+------------------------------------------------------------
+FOR AN EVENT (e.g. a school event)
+------------------------------------------------------------
+Set type: 'event' and add these two extra lines:
+
+     eventDate: 'Saturday, 25 October 2026 · 10:00 AM',
+     eventLocation: "D'Cherub Schools, Ajah/Badore, Lagos",
+
+Event posts automatically show a "Reserve a Seat" WhatsApp button.
+Article posts show a "Get the Free Toolkit" WhatsApp button.
+
+------------------------------------------------------------
+THAT'S ALL
+------------------------------------------------------------
+Save, rebuild (npm run build), redeploy. The newest post shows
+first, both on the Insights page AND in the teaser on the Home
+page. Every post ends with a WhatsApp button that turns readers
+into contacts you own.
+═══════════════════════════════════════════════════════════════

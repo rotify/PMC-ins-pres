@@ -1,0 +1,47 @@
+═══════════════════════════════════════════════════════════════
+  "GROWING GREAT KIDS" SERIES — HOW IT WORKS
+═══════════════════════════════════════════════════════════════
+
+The series (100 short dramas) lives on SOCIAL MEDIA — Facebook,
+TikTok, Instagram. The website does NOT host the videos.
+
+Instead, the website section is the "front door":
+  • It pitches the series (name, concept, "100 short films")
+  • It sends viewers to her social platforms to watch
+  • It captures leads via a WhatsApp "Get the Free Toolkit" button
+
+WHY: video belongs on social (that's where reach + the algorithm
+live). The website's job is awareness + converting viewers into
+her WhatsApp list — an audience she OWNS. This needs ZERO upkeep:
+she never edits code to "add an episode." She just keeps posting
+on social as normal, and the website always points people there.
+
+------------------------------------------------------------
+WHAT YOU CAN EDIT  (all in src/data/siteData.js → SERIES_INFO
+and SERIES_LINKS)
+------------------------------------------------------------
+1. SERIES_INFO
+   - name / tagline / intro  — the pitch text
+   - episodeCount            — "100"
+   - freebie                 — what the WhatsApp toolkit gives
+   - poster                  — optional image; see below
+
+2. SERIES_LINKS  — the "Watch every episode on ___" buttons.
+   Update each url to her real profile:
+     Facebook  → facebook.com/TriciaChris-Omon
+     TikTok    → tiktok.com/@pmceee
+     Instagram → instagram.com/triciachrisomon
+
+------------------------------------------------------------
+OPTIONAL POSTER IMAGE
+------------------------------------------------------------
+Drop an image named  series-poster.jpg  into this /public folder
+to show a nice still (e.g. the animated boy) beside the pitch.
+If you don't add one, a tasteful navy placeholder shows instead.
+
+------------------------------------------------------------
+THE WHATSAPP TOOLKIT BUTTON
+------------------------------------------------------------
+Opens WhatsApp with a pre-filled message requesting the freebie.
+Uses the number in siteData.js → PAYMENT_CONFIG.whatsappNumber.
+═══════════════════════════════════════════════════════════════

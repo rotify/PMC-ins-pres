@@ -1,0 +1,50 @@
+═══════════════════════════════════════════════════════════════
+  PAYMENT SETUP  (Paystack + Bank Transfer)
+═══════════════════════════════════════════════════════════════
+
+All payment settings live in ONE place:
+    src/data/siteData.js  →  PAYMENT_CONFIG
+
+------------------------------------------------------------
+1. PAYSTACK  (main payment method)
+------------------------------------------------------------
+You need a Paystack Payment Page link:
+
+  a) Log in at https://dashboard.paystack.com
+  b) Go to:  Payment Pages  →  + Create Page
+  c) Give it a name (e.g. "PMC Collective Orders")
+  d) You can leave the amount open (the site passes the amount)
+  e) Click Create, then COPY the page link. It looks like:
+        https://paystack.com/pay/pmc-collective
+
+  f) Paste it into siteData.js:
+        paystackLink: 'https://paystack.com/pay/pmc-collective',
+
+When a customer taps "Pay with Paystack", the site opens this
+page in a new tab with their email and the amount pre-filled.
+
+NOTE: Paystack Payment Pages with a fixed amount ignore the
+passed amount. For per-item amounts, either:
+  - create a page with an OPEN/CUSTOM amount, OR
+  - create separate pages per product and store each link.
+
+------------------------------------------------------------
+2. BANK TRANSFER  (already set to your Optimus account)
+------------------------------------------------------------
+        bank: {
+          bankName:      'Optimus Bank',
+          accountName:   'PMC Collective',
+          accountNumber: '2002174994',
+        }
+Change accountName if it should read differently on receipts.
+
+------------------------------------------------------------
+3. WHERE RECEIPTS GO
+------------------------------------------------------------
+        receiptEmail:   'triciacares2020@gmail.com',
+        whatsappNumber: '2348023138594',   // digits only, country code, no +
+
+Customers upload a receipt, then send it to you via WhatsApp
+or Email (both buttons are shown). The order details are
+pre-filled in the message; they just attach the file.
+═══════════════════════════════════════════════════════════════

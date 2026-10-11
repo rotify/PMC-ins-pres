@@ -1,0 +1,56 @@
+═══════════════════════════════════════════════════════════════
+  "GROWING GREAT KIDS" VIDEO SERIES — HOW TO ADD EPISODES
+═══════════════════════════════════════════════════════════════
+
+The series shows on the HOME page (teaser) and inside THE HUB
+(full section with a "More Episodes" grid).
+
+------------------------------------------------------------
+ADDING THE FIRST VIDEO (Episode 1)
+------------------------------------------------------------
+1. Drop your video file into this /public folder, named EXACTLY:
+       series-ep-1.mp4
+
+2. (Optional but recommended) Add a thumbnail still image so it
+   looks polished before playing:
+       series-ep-1-poster.jpg
+
+That's it — the video will play inline when clicked.
+
+------------------------------------------------------------
+ADDING A NEW EPISODE LATER (Episode 2, 3, ...)
+------------------------------------------------------------
+Open  src/data/siteData.js  and find  SERIES_EPISODES.
+Copy the existing episode block and paste it ABOVE the others
+(newest first). Change the details:
+
+  {
+    id: 'ep-2',
+    number: 2,
+    title: 'Your New Episode Title',
+    video:  '/series-ep-2.mp4',
+    poster: '/series-ep-2-poster.jpg',
+    hook:   'The one-line hook / caption for this episode.',
+    freebie:'Free [whatever the giveaway is]',
+    duration: '0:42',
+    date:   'August 2026',
+  },
+
+Then drop series-ep-2.mp4 (and its poster) into /public.
+The newest episode automatically becomes the big featured one;
+older episodes drop into the "More Episodes" grid below it.
+
+------------------------------------------------------------
+THE "GET THE FREE TOOLKIT" BUTTON
+------------------------------------------------------------
+Each episode's button opens WhatsApp with a pre-filled message
+asking for that episode's freebie. It uses the WhatsApp number
+in siteData.js → PAYMENT_CONFIG.whatsappNumber. Change that in
+one place if the number ever changes.
+
+------------------------------------------------------------
+SERIES NAME / INTRO TEXT
+------------------------------------------------------------
+Edit siteData.js → SERIES_INFO to change the series name,
+tagline, or intro paragraph.
+═══════════════════════════════════════════════════════════════

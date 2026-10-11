@@ -1,0 +1,50 @@
+/* ── FOOTER (solid, no gradients) ── */
+.footer { background: var(--ink); color: rgba(255, 255, 255, 0.75); padding: 5rem 0 0; position: relative; overflow: hidden; }
+.footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--gold); }
+
+.footer__grid { display: grid; grid-template-columns: 1.8fr 1fr 1fr 1.2fr; gap: 3rem; margin-bottom: 4rem; }
+
+.footer__brand-logo { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.2rem; }
+.footer__brand-logo img { width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--gold); object-fit: cover; }
+.footer__brand-name { font-family: var(--font-display); font-size: 1.5rem; color: var(--white); font-weight: 700; }
+.footer__brand-tagline { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-light); display: block; }
+.footer__brand-desc { font-size: 0.95rem; line-height: 1.7; color: rgba(255, 255, 255, 0.55); margin-bottom: 1.5rem; }
+
+.footer__social { display: flex; gap: 0.75rem; }
+.footer__social-link {
+  width: 38px; height: 38px; border-radius: 50%; background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.1); display: flex; align-items: center; justify-content: center;
+  color: rgba(255, 255, 255, 0.6); font-size: 0.9rem; transition: all var(--ease);
+}
+.footer__social-link:hover { background: var(--gold); border-color: var(--gold); color: var(--ink); transform: translateY(-3px); }
+
+.footer__col-title {
+  font-family: var(--font-body); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--gold-light); margin-bottom: 1.2rem; position: relative; padding-bottom: 0.8rem;
+}
+.footer__col-title::after { content: ''; position: absolute; bottom: 0; left: 0; width: 28px; height: 2px; background: var(--gold); border-radius: 2px; }
+
+.footer__links li { margin-bottom: 0.6rem; }
+.footer__links button {
+  font-size: 0.9rem; color: rgba(255, 255, 255, 0.55); transition: all var(--ease);
+  display: inline-flex; align-items: center; gap: 0.5rem; background: none; border: none; cursor: pointer; padding: 0; text-align: left;
+}
+.footer__links button:hover { color: var(--gold-light); transform: translateX(4px); }
+.footer__links i { font-size: 0.7rem; color: var(--gold); }
+
+.footer__contact-item { display: flex; align-items: flex-start; gap: 0.75rem; margin-bottom: 0.85rem; font-size: 0.9rem; color: rgba(255, 255, 255, 0.55); }
+.footer__contact-item i { color: var(--gold); margin-top: 0.15rem; flex-shrink: 0; width: 16px; }
+
+.footer__bottom { border-top: 1px solid rgba(255, 255, 255, 0.07); padding: 1.5rem 0; }
+.footer__bottom-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.footer__copy { font-size: 0.85rem; color: rgba(255, 255, 255, 0.35); }
+.footer__legal { display: flex; gap: 1.5rem; }
+.footer__legal a { font-size: 0.85rem; color: rgba(255, 255, 255, 0.35); transition: color var(--ease); }
+.footer__legal a:hover { color: var(--gold-light); }
+
+@media (max-width: 1024px) { .footer__grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) {
+  .footer__grid { grid-template-columns: 1fr; gap: 2rem; }
+  .footer__bottom-inner { flex-direction: column; text-align: center; }
+  .footer__legal { justify-content: center; }
+}

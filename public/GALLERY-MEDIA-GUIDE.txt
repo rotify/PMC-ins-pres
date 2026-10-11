@@ -1,0 +1,57 @@
+═══════════════════════════════════════════════════════════════
+  ADDING YOUR 42 PHOTOS + 6 VIDEOS TO THE GALLERY
+═══════════════════════════════════════════════════════════════
+
+Just drop the files into THIS folder (public/) using these EXACT
+names. The gallery already has a slot waiting for each one.
+
+------------------------------------------------------------
+PHOTOS  (42)  →  name them gallery-01.jpg through gallery-42.jpg
+------------------------------------------------------------
+   gallery-01.jpg
+   gallery-02.jpg
+   gallery-03.jpg
+   ...
+   gallery-42.jpg
+
+   • Use .jpg. If yours are .png, either convert them, or open
+     src/data/siteData.js and change ".jpg" to ".png" for that slot.
+   • Two-digit numbers: 01, 02 ... 09, 10, 11 ... 42.
+
+------------------------------------------------------------
+VIDEOS  (6)  →  name them gallery-video-1.mp4 … gallery-video-6.mp4
+------------------------------------------------------------
+   gallery-video-1.mp4
+   gallery-video-2.mp4
+   gallery-video-3.mp4
+   gallery-video-4.mp4
+   gallery-video-5.mp4
+   gallery-video-6.mp4
+
+   OPTIONAL thumbnail for each video (a still image shown before
+   it plays). If you skip these, the video still works:
+   gallery-video-1-poster.jpg ... gallery-video-6-poster.jpg
+
+------------------------------------------------------------
+YOUR EXISTING 14 PHOTOS + 1 VIDEO
+------------------------------------------------------------
+Untouched. They keep their current filenames (pmc 3.jpg,
+comm celebration.jpg, the book covers, etc.) and stay where
+they are in the gallery.
+
+------------------------------------------------------------
+WANT TO RENAME / RE-CAPTION SLOTS?
+------------------------------------------------------------
+Open src/data/siteData.js → find GALLERY_ITEMS. Each line is one
+tile. You can change its `src` (filename), `title`, `desc`,
+`category` ('book-launch' | 'community' | 'workshops'), or `date`.
+
+------------------------------------------------------------
+FATHER'S DAY MESSAGE
+------------------------------------------------------------
+The popup uses gallery-01.jpg by default. To use a different
+photo, open src/components/FathersDayPopup.jsx and change the
+`image:` line near the top.
+To REMOVE the popup entirely: delete the <FathersDayPopup /> line
+in src/App.jsx.
+═══════════════════════════════════════════════════════════════

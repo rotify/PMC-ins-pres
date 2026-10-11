@@ -1,0 +1,39 @@
+═══════════════════════════════════════════════════════════════
+  HOW TO ADD YOUR IMAGES
+═══════════════════════════════════════════════════════════════
+
+Put all your image files in THIS folder (the "public" folder).
+That's it — just drop them here. No code changes needed.
+
+The filenames must match EXACTLY (including spaces and capital
+letters). Here are the 10 the site uses:
+
+  LOGO (navbar + footer + loading screen)
+    pmc2-logo.jpg
+
+  HOMEPAGE
+    comm celebration.jpg     ← big hero background image
+    pmc 3.jpg                ← book-launch photo
+    pmc new.jpg             ← founder photo
+
+  BOOK COVERS
+    magical tots.jpg
+    the uplift kitt.jpg
+    The Golden seeds.jpg
+
+  HUB / PRODUCTS
+    patma product.jpg
+
+  TESTIMONIAL AVATARS
+    reviewer1.jpg
+    reviewer2.jpg
+    reviewer3.jpg
+
+───────────────────────────────────────────────────────────────
+TIP: If a name has a space (like "pmc 3.jpg"), keep the space.
+If your file is named differently, either rename your file to
+match, OR open src/data/siteData.js and change the filename there.
+
+Any image you don't provide will simply show a navy "PMC Collective"
+placeholder box instead of breaking the page.
+═══════════════════════════════════════════════════════════════
